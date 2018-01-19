@@ -12,16 +12,17 @@ also need to acquire web dev skills, so I'm doing coding projects as well.
 
 ## Progress
 
-Courses Completed: 0
-Total Points earned: 0
+**Courses Completed:** 0
 
-Current Course: TBD (working on a project)
+**Total Points earned:** 0
 
-Current Project:
+**Current Course:** TBD (working on a project)
+
+**Current Project:**
 
 - [fCC Voting App](https://www.freecodecamp.org/challenges/build-a-voting-app)
 
-Current Book(s):
+**Current Book(s):**
 
 - [Discrete Mathematics: An Open Introduction](http://discrete.openmathbooks.org/dmoi/)
 - [You Don't Know JS: Up and Going](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/README.md#you-dont-know-js-up--going)
