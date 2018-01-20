@@ -14,7 +14,7 @@ also need to acquire web dev skills, so I'm doing coding projects as well.
 
 **Courses Completed:** 0
 
-**Total Points earned:** 0
+**Total Points earned:** 20
 
 **Current Course:** TBD (working on a project)
 
@@ -30,6 +30,7 @@ also need to acquire web dev skills, so I'm doing coding projects as well.
 | Date Finished | Activity                  | Points | Links  |
 | ------------- | ------------------------- | ------ | ------------------------------------------- |
 | Jan 19        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
+| Jan 20        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 
 
 ## Computer Science Intensive
