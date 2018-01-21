@@ -14,7 +14,7 @@ also need to acquire web dev skills, so I'm doing coding projects as well.
 
 **Courses Completed:** 0
 
-**Total Points earned:** 20
+**Total Points earned:** 230
 
 **Current Course:** TBD (working on a project)
 
@@ -25,13 +25,14 @@ also need to acquire web dev skills, so I'm doing coding projects as well.
 **Current Book(s):**
 
 - [Discrete Mathematics: An Open Introduction](http://discrete.openmathbooks.org/dmoi/)
-- [You Don't Know JS: Up and Going](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/README.md#you-dont-know-js-up--going)
+* [You Don't Know JS: Scope & Closures](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/README.md#you-dont-know-js-scope--closures)
 
 | Date Finished | Activity                  | Points | Links  |
 | ------------- | ------------------------- | ------ | ------------------------------------------- |
 | Jan 19        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 | Jan 20        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
-
+| Jan 21        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
+| Jan 21        | YKDJS: Up & Going         | 200    | [YKDJS: Up & Going](https://github.com/getify/You-Dont-Know-JS/tree/master/up%20&%20going#you-dont-know-js-up--going) |
 
 ## Computer Science Intensive
 
@@ -79,7 +80,6 @@ also need to acquire web dev skills, so I'm doing coding projects as well.
 
 ## Book Suggestions
 
-* [You Don't Know JS: Up & Going](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/README.md#you-dont-know-js-up--going)
 * [You Don't Know JS: Scope & Closures](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/README.md#you-dont-know-js-scope--closures)
 * [You Don't Know JS: this & Object Prototypes](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes)
 * [You Don't Know JS: Types & Grammar](https://github.com/getify/You-Dont-Know-JS/blob/master/types%20&%20grammar/README.md#you-dont-know-js-types--grammar)
