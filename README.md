@@ -10,6 +10,10 @@ also need to acquire web dev skills, so I'm doing coding projects as well.
 - Add bonus objectives from the bonus list as often as desired.
 - All assignments must be completed for course to be considered complete.
 
+## Link to original speedstudy repo
+
+https://github.com/P1xt/speedstudy
+
 ## Progress
 
 **Courses Completed:** 0
