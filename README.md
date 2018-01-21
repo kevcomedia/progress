@@ -31,7 +31,7 @@ https://github.com/P1xt/speedstudy
 - [Discrete Mathematics: An Open Introduction](http://discrete.openmathbooks.org/dmoi/)
 * [You Don't Know JS: Scope & Closures](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/README.md#you-dont-know-js-scope--closures)
 
-Be sure to check out the [logs]('/logs') and [notes]('/notes').
+Be sure to check out the [logs](/logs) and [notes](/notes).
 
 | Date Finished | Activity                  | Points | Links  |
 | ------------- | ------------------------- | ------ | ------------------------------------------- |
