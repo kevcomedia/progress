@@ -18,7 +18,7 @@ https://github.com/P1xt/speedstudy
 
 **Courses Completed:** 0
 
-**Total Points earned:** 230
+**Total Points earned:** 240
 
 **Current Course:** TBD (working on a project)
 
@@ -39,6 +39,7 @@ Be sure to check out the [logs](/logs) and [notes](/notes).
 | Jan 20        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 | Jan 21        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 | Jan 21        | YKDJS: Up & Going         | 200    | [YKDJS: Up & Going](https://github.com/getify/You-Dont-Know-JS/tree/master/up%20&%20going#you-dont-know-js-up--going) |
+| Jan 22        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 
 ## Computer Science Intensive
 
