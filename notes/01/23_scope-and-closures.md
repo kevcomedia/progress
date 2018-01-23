@@ -156,3 +156,23 @@ January 23 (Tuesday)
     by the call site of the function it's in
 * **Arrow function.** its `this` binding is bound to the `this` binding of its
   enclosing scope
+
+---
+
+I implemented the module manager proof-of-concept as UMD. https://gist.github.com/kevcomedia/d3a8b0d142d414bd9a2021965d25c4ef
+
+I tried putting a function declaration in a block, just to see if it has closure
+over that block:
+```javascript
+{
+  let a = 3;
+  function foo() {
+    console.log(a);
+  }
+}
+
+foo();
+```
+Even though the function is supposed to be hoisted out of the block, it keeps a
+closure over that block! Then again I don't know if this has use cases, and
+function declarations in blocks are not reliable anyway.
