@@ -18,7 +18,7 @@ https://github.com/P1xt/speedstudy
 
 **Courses Completed:** 0
 
-**Total Points earned:** 240
+**Total Points earned:** 450
 
 **Current Course:** TBD (working on a project)
 
@@ -29,7 +29,7 @@ https://github.com/P1xt/speedstudy
 **Current Book(s):**
 
 - [Discrete Mathematics: An Open Introduction](http://discrete.openmathbooks.org/dmoi/)
-* [You Don't Know JS: Scope & Closures](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/README.md#you-dont-know-js-scope--closures)
+* [You Don't Know JS: this & Object Prototypes](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes)
 
 Be sure to check out the [logs](/logs) and [notes](/notes).
 
@@ -38,8 +38,10 @@ Be sure to check out the [logs](/logs) and [notes](/notes).
 | Jan 19        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 | Jan 20        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 | Jan 21        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
-| Jan 21        | YKDJS: Up & Going         | 200    | [YKDJS: Up & Going](https://github.com/getify/You-Dont-Know-JS/tree/master/up%20&%20going#you-dont-know-js-up--going) |
+| Jan 21        | YDKJS: Up & Going         | 200    | [YDKJS: Up & Going](https://github.com/getify/You-Dont-Know-JS/tree/master/up%20&%20going#you-dont-know-js-up--going) |
 | Jan 22        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
+| Jan 23        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
+| Jan 23        | YDKJS: Scope & Closures   | 200    | [YDKJS: Scope & Closures](https://github.com/getify/You-Dont-Know-JS/tree/master/scope%20%26%20closures#you-dont-know-js-scope--closures) |
 
 ## Computer Science Intensive
 
@@ -87,8 +89,6 @@ Be sure to check out the [logs](/logs) and [notes](/notes).
 
 ## Book Suggestions
 
-* [You Don't Know JS: Scope & Closures](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/README.md#you-dont-know-js-scope--closures)
-* [You Don't Know JS: this & Object Prototypes](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes)
 * [You Don't Know JS: Types & Grammar](https://github.com/getify/You-Dont-Know-JS/blob/master/types%20&%20grammar/README.md#you-dont-know-js-types--grammar)
 * [You Don't Know JS: Async & Performance](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20&%20performance/README.md#you-dont-know-js-async--performance)
 * [You Don't Know JS: ES6 & Beyond](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20&%20beyond/README.md#you-dont-know-js-es6--beyond)
