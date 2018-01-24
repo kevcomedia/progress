@@ -18,7 +18,7 @@ https://github.com/P1xt/speedstudy
 
 **Courses Completed:** 0
 
-**Total Points earned:** 450
+**Total Points earned:** 460
 
 **Current Course:** TBD (working on a project)
 
@@ -42,6 +42,7 @@ Be sure to check out the [logs](/logs) and [notes](/notes).
 | Jan 22        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 | Jan 23        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 | Jan 23        | YDKJS: Scope & Closures   | 200    | [YDKJS: Scope & Closures](https://github.com/getify/You-Dont-Know-JS/tree/master/scope%20%26%20closures#you-dont-know-js-scope--closures) |
+| Jan 24        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 
 ## Computer Science Intensive
 
