@@ -35,16 +35,16 @@ Be sure to check out the [logs](/logs) and [notes](/notes).
 
 | Date Finished | Activity                  | Points | Links  |
 | ------------- | ------------------------- | ------ | ------------------------------------------- |
-| Jan 19        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
-| Jan 20        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
-| Jan 21        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
-| Jan 21        | YDKJS: Up & Going         | 200    | [YDKJS: Up & Going](https://github.com/getify/You-Dont-Know-JS/tree/master/up%20&%20going#you-dont-know-js-up--going) |
-| Jan 22        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
-| Jan 23        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
-| Jan 23        | YDKJS: Scope & Closures   | 200    | [YDKJS: Scope & Closures](https://github.com/getify/You-Dont-Know-JS/tree/master/scope%20%26%20closures#you-dont-know-js-scope--closures) |
-| Jan 24        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
-| Jan 25        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 | Jan 26        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
+| Jan 25        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
+| Jan 24        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
+| Jan 23        | YDKJS: Scope & Closures   | 200    | [YDKJS: Scope & Closures](https://github.com/getify/You-Dont-Know-JS/tree/master/scope%20%26%20closures#you-dont-know-js-scope--closures) |
+| Jan 23        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
+| Jan 22        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
+| Jan 21        | YDKJS: Up & Going         | 200    | [YDKJS: Up & Going](https://github.com/getify/You-Dont-Know-JS/tree/master/up%20&%20going#you-dont-know-js-up--going) |
+| Jan 21        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
+| Jan 20        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
+| Jan 19        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 
 ## Computer Science Intensive
 
