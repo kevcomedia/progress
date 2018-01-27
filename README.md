@@ -18,23 +18,22 @@ https://github.com/P1xt/speedstudy
 
 **Courses Completed:** 0
 
-**Total Points earned:** 480
+**Total Points earned:** 690
 
 **Current Course:** TBD (working on a project)
 
-**Current Project:**
-
-- [fCC Voting App](https://www.freecodecamp.org/challenges/build-a-voting-app)
+**Current Project:** [fCC Voting App](https://www.freecodecamp.org/challenges/build-a-voting-app)
 
 **Current Book(s):**
 
 - [Discrete Mathematics: An Open Introduction](http://discrete.openmathbooks.org/dmoi/)
-* [You Don't Know JS: this & Object Prototypes](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes)
 
 Be sure to check out the [logs](/logs) and [notes](/notes).
 
 | Date Finished | Activity                  | Points | Links  |
 | ------------- | ------------------------- | ------ | ------------------------------------------- |
+| Jan 27        | YDKJS: this & Object Prototypes | 200 | [YDKJS: this & Object Prototypes](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes) |
+| Jan 27        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 | Jan 26        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 | Jan 25        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 | Jan 24        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
