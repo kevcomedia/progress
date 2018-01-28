@@ -106,7 +106,7 @@ Some notes on object sub-types:
   they're much easier to read.
 
 Values in objects can be accessed using **dot notation** (`obj.prop`) or
-**bracket notation** (`obj.['prop']`). Dot notation can only be used if the
+**bracket notation** (`obj['prop']`). Dot notation can only be used if the
 property name is a valid identifier, but is preferable over bracket notation
 because again it's easier to read. Since you use strings in bracket notation, it
 is used for programmatically accessing values in objects (by storing property
@@ -215,12 +215,11 @@ engines. Any observed ordering is unreliable.** On the other hand, we can always
 safely iterate over them as long as we don't need to consider any ordering among
 the property names.
 
-**`for-of` loop.`** A new syntax that consumes an object's iterator for
-iterating over properties on that object. An **iterator** is an object that has
-a `next` property, which is a function that should return another object with
-the `value` and `done` properties. The `for-of` loop keeps calling this `next()`
-function, until the `next()` function returns an object whose `done` property is
-`true`.
+**`for-of` loop.** A new syntax that consumes an object's iterator for iterating
+over properties on that object. An **iterator** is an object that has a `next`
+property, which is a function that should return another object with the `value`
+and `done` properties. The `for-of` loop keeps calling this `next()` function,
+until the `next()` function returns an object whose `done` property is `true`.
 
 For an object to be usable by a `for-of` loop, that object must have a special
 function, called `@@iterator`, that returns an actual iterator. The `@@iterator`

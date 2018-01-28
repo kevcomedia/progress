@@ -32,7 +32,7 @@ Be sure to check out the [logs](/logs) and [notes](/notes).
 
 | Date Finished | Activity                  | Points | Links  |
 | ------------- | ------------------------- | ------ | ------------------------------------------- |
-| Jan 28        | Notes - YDKJS: this & Object Prototypes | 15 | [Notes](/notes/01/28_this-and-object-prototypes) |
+| Jan 28        | Notes - YDKJS: this & Object Prototypes | 15 | [Notes](/notes/01/28_this-and-object-prototypes.md) |
 | Jan 28        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 | Jan 27        | YDKJS: this & Object Prototypes | 200 | [YDKJS: this & Object Prototypes](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes) |
 | Jan 27        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
