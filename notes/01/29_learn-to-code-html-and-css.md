@@ -109,7 +109,8 @@ There are also **inline elements**. These elements don't stack like block
 elements do, but rather they go with the flow of the document. Generally,
 elements that deal with text are inline elements. Examples are the `<a>`
 element, `<span>`, `<b>`, and `<i>`. Block elements cannot be nested in inline
-elements.
+elements (`<a>` is an exception; though it is an inline element it can be used
+to wrap around a block element).
 
 HTML elements can also be given **class names**. Class names are often used to
 mark elements that should receive a particular set of styles (via CSS class
@@ -139,8 +140,7 @@ Think of the bold text at the beginning of most Wikipedia articles.
 ```html
 <p>You are about to do something. <strong>You can't undo this.</strong></p>
 
-<p>In combinatorics, a <b>derangement</b> is a particular permutation of a
-collection of entities such that...</p>
+<p>In combinatorics, a <b>derangement</b> is a particular permutation of a collection of entities such that...</p>
 ```
 
 On the other hand, the **`<em>`** and **`<i>`** elements make text italicized by
@@ -161,8 +161,193 @@ language, or scientific names, etc.
 <p>The word <i>kato</i> means cat in Esperanto.</p>
 ```
 
-<!-- Write the rest of the chapter -->
+Aside from HTML elements for text, there are also elements that provide
+structure to the page (not to be confused with _layout_; layout is
+presentational). In the past, `<div>`'s used to provide most of the structure,
+but HTML5 provides structure elements with semantic value, and they should be
+used wherever appropriate.
+
+The **`<header>`** element is usually placed at the top of the page, article,
+section, etc. Think of page banners at the top.
+
+The **`<nav>`** element is used as the primary navigation section of the page.
+Often this will contain links to other parts of the page, or to other pages of
+the website.
+
+The **`<article>`** element is used for self-contained content, that even if
+that section is moved somewhere else, it would still make sense on its own.
+Think of newspaper or magazine articles.
+
+The **`<section>`** element is used for thematic grouping of content. It's
+perhaps the most generic of the structure elements (aside from the `<div>`), but
+it's contents should share a common theme. Honestly I'm not really sure, but the
+way I'd like to think about it is that if it doesn't make sense to use
+`<article>`, and the grouping is not for the sake of styling (it's the `<div>`'s
+job), use `<section>`.
+
+The **`<aside>`** element is for content that is somewhat related to the main
+content. Think of sidebars, soapboxes in textbooks, or the Blue Box in some of
+the Wait But Why articles
+([here's an example](https://waitbutwhy.com/2015/01/artificial-intelligence-revolution-2.html),
+though you'll have to do a bit of scrolling down; just open your browser's find
+tool and enter "blue box").
+
+The **`<footer>`** element is sort of the opposite of the `<header>`. It is
+placed at the bottom of the page, section, etc. Think of the section at the
+bottom of many web pages that contain contact information or copyright.
 
 ## Chapter 3: Getting to Know CSS
 
-<!-- Write stuff -->
+**All styles cascade from top to bottom.** In general, styles at the bottom are
+more precedent than those at the top.
+
+```css
+h1 {
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 24px;
+}
+```
+
+In this example, `<h1>` elements will get a 24px font size, not 20px.
+
+The cascade also applies to properties within a single selector.
+
+```css
+h1 {
+  font-size: 20px;
+  font-size: 24px;
+}
+```
+
+Here the 24px font size will also apply.
+
+A selector's **specificity weight** determines which styles will be applied when
+multiple selectors change a particular style. As mentioned, ID selectors have
+higher specificity than class selectors, and class selectors have higher
+specificity than type selectors.
+
+Suppose you have a `<p class="lead">` element, and these styles:
+
+```css
+p {
+  font-size: 18px;
+}
+
+.lead {
+  font-size: 22px;
+}
+```
+
+Since the `.lead` class selector has higher specificity than the `p` type
+selector, the 22px font size will apply. Note that higher-specificity selectors
+break the cascade, so above, it doesn't matter whether the `p` selector comes
+before `.lead`, or vice versa.
+
+It is best practice to keep a selector's specificity as low as possible, so as
+not to break the cascade and to keep the styling more predictable. An approach
+to keep specificity low is by writing modular styles.
+
+When applying color, there are different classes of values available. You can
+identify a color by its **name**, or use **hex codes**, **RGB values**, or **HSL
+values**.
+
+There are two types of length values: **absolute lengths** and **relative
+lengths**. Absolute lengths are based on some physical measurement, like inches
+or centimeters. The most common unit is the **pixel** (1/96 of an inch; `px` in
+units). It's a good unit to start with, but it is not very flexible, since
+there's now a wide array of displays with varying screen sizes.
+
+Relative lengths rely on other measurements. For example, if a property has a
+length value in **percentages** (`%` in units), it takes the percentage of the
+value of the same property of its parent element. For example,
+
+```html
+<div>
+  <p>Hello</p>
+</div>
+```
+
+```css
+div {
+  font-size: 24px;
+}
+
+p {
+  font-size: 60%;
+}
+```
+
+The `<p>` element's font size is going to be 60% that of its parent's font size,
+in this case 60% of 24px, or 14.4px.
+
+Percentages are usually used for properties like `width` or `height`.
+
+The **`em`** unit is the multiple of an element's font size. If the element has
+not font size specified, it will take that of the closest parent with a
+specified font size. If nothing else, it uses the font size of the `<body>`,
+whatever that may be.
+
+```css
+div {
+  font-size: 24px;
+}
+
+p {
+  font-size: 0.8em;
+}
+```
+
+Using the same HTML snippet, the `<p>` element will use 0.8 \* 24px as its font
+size, or 19.2px.
+
+## Chapter 4: Opening the Box Model
+
+The **`display`** property changes how an element is displayed on the page.
+Among other things, it can make an element behave like a block, an inline
+element, or as an inline block, or not display the element at all, among other
+things.
+
+Every element in the page is a rectangular box. The **CSS box model** consists
+of the **content**, **padding**, **border**, and **margin**. An element's
+dimensions (width and height) are inflenced by the box model. By default, an
+element's width is the sum of the width of the content, the left and right
+paddings, left and right borders, and left and right margins. The same reasoning
+applies to an element's height. A major gotcha with widths and heights of an
+element is that the `width` and `height` properies really just apply to the
+width and height of the _content_ by default, not including how much padding or
+border or margins there are.
+
+Block elements take up the full width of their container by default. Inline
+elements only take as much width as their content. Both types take the height of
+their content.
+
+Inline elements also ignore `width` and `height` values entirely.
+
+The **margin** determines the space around the element, outside the border. It
+is useful for adding space between elements.
+
+The **padding** determines the space inside the borders.
+
+Inline elements also have gotchas regarding margins and paddings. They ignore
+vertical margins. They accept vertical padding, though it might overlap with
+lines above or below the element.
+
+There are also longhand forms, where `margin` and `padding` are followed by a
+dash, then followed by the side (e.g., `margin-top`, `padding-left`, etc.).
+
+The **border** lies between the margin and padding of an element. Borders have
+width, style, and color. Borders can be made rounded by adding the
+`border-radius` property to an element.
+
+The **`box-sizing`** property affects how widths and heights are determined. By
+default it is set to `content-box`, but it can also be changed to `border-box`
+(there was a `padding-box` value, but it's deprecated). When it is set to
+`border-box`, the element's `width` property will consist of the width of the
+content, and the sizes of the left and right padding and borders. Any change to
+the padding or border sizes won't increase the element's width, but rather the
+inner widths will adjust accordingly. It's also the same with heights. Setting
+the `box-sizing` of elements to `border-box` makes it easier to work with widths
+and heights.
