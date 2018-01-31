@@ -260,9 +260,14 @@ or centimeters. The most common unit is the **pixel** (1/96 of an inch; `px` in
 units). It's a good unit to start with, but it is not very flexible, since
 there's now a wide array of displays with varying screen sizes.
 
-Relative lengths rely on other measurements. For example, if a property has a
+Relative lengths rely on other measurements. ~~For example, if a property has a
 length value in **percentages** (`%` in units), it takes the percentage of the
-value of the same property of its parent element. For example,
+value of the same property of its parent element.~~
+
+**Actually,** percentages are more nuanced than that. According to MDN, they are
+not really lengths, and the effects of a percentage differs between properties.
+
+For example,
 
 ```html
 <div>
@@ -283,7 +288,8 @@ p {
 The `<p>` element's font size is going to be 60% that of its parent's font size,
 in this case 60% of 24px, or 14.4px.
 
-Percentages are usually used for properties like `width` or `height`.
+But when applied to properties such as `margin` or `width`, the percentage is
+the percentage of the width of the parent element.
 
 The **`em`** unit is the multiple of an element's font size. If the element has
 not font size specified, it will take that of the closest parent with a
@@ -312,11 +318,11 @@ things.
 
 Every element in the page is a rectangular box. The **CSS box model** consists
 of the **content**, **padding**, **border**, and **margin**. An element's
-dimensions (width and height) are inflenced by the box model. By default, an
+dimensions (width and height) are influenced by the box model. By default, an
 element's width is the sum of the width of the content, the left and right
 paddings, left and right borders, and left and right margins. The same reasoning
 applies to an element's height. A major gotcha with widths and heights of an
-element is that the `width` and `height` properies really just apply to the
+element is that the `width` and `height` properties really just apply to the
 width and height of the _content_ by default, not including how much padding or
 border or margins there are.
 
@@ -351,3 +357,130 @@ the padding or border sizes won't increase the element's width, but rather the
 inner widths will adjust accordingly. It's also the same with heights. Setting
 the `box-sizing` of elements to `border-box` makes it easier to work with widths
 and heights.
+
+## Chapter 5: Positioning Content
+
+The **`float`** property removes an element from the document's normal flow and
+moves it to the left or right. Content then flows around it. Floated elements
+lose their default widths, so a `width` property has to be explicitly set.
+Floating an element also changes its `display` to `block`.
+
+`float` has been used to set a page's layout, but it was never intended to be
+used for layout. Think of illustrations in textbooks, where you'll see an
+illustration that is wrapped with text around them (or look at illustrations in
+Wikipedia). If the page was a web page, then those illustrations are floated.
+
+Since `float` was never intended for layout, using it as such has its set of
+gotchas. One way to deal with such gotchas is by using the **`clear`** property
+on the element after the floated element. The `clear` property returns the page
+to its normal flow at that point.
+
+We can also make a specialized container for floated elements. The floated
+elements in such a container shouldn't be able to affect other parts of the page
+with float-weirdness. The container is essentially a black box. This technique
+is called a **clearfix**.
+
+Aside from using floats, we can create side-by-side layouts with **inline block
+elements**. It also has its own set of gotchas, though in my opinion it's more
+appropriate for layouts (and more predictable too) than floats.
+
+Taking positioning to another level, there is a **`position`** property that
+specifies how that element is positioned on the page. When an element is
+**relatively positioned** (`position: relative;`), we can offset its position on
+the page (with the `top`, `left`, `bottom` and `right` properties) without
+affecting the flow of the document. In other words its original position on the
+page is preserved.
+
+When an element is **absolutely positioned** (`position: absolute;`), the
+element is removed from the normal flow. Changing the `top`, `left`, `bottom`
+and right properties of an absolutely positioned element causes it to move
+relative to the closest relatively positioned parent (or if there's none,
+relative to the page itself).
+
+## Chapter 6: Working with Typography
+
+**Typeface** is often confused or used interchangeably with **font**. The
+typeface is the actual appearance of the text, and is a work of art. Meanwhile,
+the font is the file in the computer in which information about the typeface is
+stored.
+
+The **color** property allows changing the color of text.
+
+When styling text, there is the set of `font` properties. The **`font-family`**
+defines which fonts the text will use. It can take a comma-separated list of
+font families. The browser will first try to use the first one in the list. If
+it is not available, it will use the second, and so on. It is a good idea to
+define fallbacks for fonts.
+
+**`font-size`** affects how large the text will appear, and takes any length
+values.
+
+**`font-style`** is used if you want to make the text italicized (by giving it
+the `italic` value).
+
+**`font-variant`** is used if you want to use small caps for the text. It can
+also take other values, though I'm only familiar with small caps.
+
+**`font-weight`** is used to make text bold. It can also take numeric values
+from 100 to 900 in increments of 100, corresponding to the thickness of the
+text. The value must be available in the font, otherwise it will round to the
+nearest available weight.
+
+**`line-height`** is used to adjust the distance between lines. Around 150% of
+the text's font size is a good value for the `line-height` for making text
+legible. It can also be used to vertically center one-liner text in block
+elements (in conjunction with setting the element's `height`). I'm gonna
+remember this one :P
+
+Like the `margin` and `padding` properties, there is also a shorthand for font
+properties, aptly named `font`. It takes various font property values in a
+specific order, but the important values are the font size and the font family.
+
+Aside from the font-based properties, there are also text-based properties.
+These properties don't require information from the font.
+
+**`text-align`** adjusts the text's horizontal alignment within its block. It
+can be set to `left`, `right`, `center`, or `justified` (like in word
+processors).
+
+**`text-decoration`** deals with things like underlining text. Until now I never
+knew you can set its color and style separately from the text's color, but it
+looks like they're not widely supported.
+
+**`text-indent`** sets how much indentation the first line of text gets.
+
+**`text-shadow`** is used to add pretty shadows on text. Text can also have
+multiple shadows.
+
+**`text-transform`** is used to change the capitalization of text, whether to
+make everything `lowercase`, `uppercase`, or `capitalize` the first letter of
+every word.
+
+**`letter-spacing`** affects how much space there is between letters in text.
+Likewise, **`word-spacing`** affects how much space there is between words.
+
+There is a set of fonts that are already installed in most devices, called
+**web-safe fonts**. Among others, the list includes Arial, Courier, and Times.
+Since they're widely available, they are perfect as fallback fonts.
+
+We can also embed fonts that are not installed in devices. By using
+**`@font-face`**, we can specify where to fetch the font files and then give
+them names (which is then used as normal `font-family` value). However, just
+because we can doesn't mean we should, since typefaces are works of art, and
+fonts often have licences attached with them. Fortunately there are freely
+available fonts that we can use, such as those found in Google Fonts.
+
+The **`<cite>`** element is used for referencing an author or some other
+resource. If applicable, there should be a hyperlink nearby that links to the
+cited resource.
+
+The **`<q>`** element is used for short inline quotes. Quotation marks are
+provided by the browser, which can vary depending on the `lang` attribute
+(though unfortunately the CSS reset strips off these quotation marks). They also
+have the `cite` attribute for adding a reference URL. It's not visible to
+browsers (though used by screen readers), so it's helpful to place an actual
+hyperlink nearby.
+
+The **`<blockquote>`** element is for larger blocks of text from some external
+source. It also has the `cite` attribute, and we can embed a `<cite>` element in
+it.
