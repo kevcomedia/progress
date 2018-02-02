@@ -484,3 +484,294 @@ hyperlink nearby.
 The **`<blockquote>`** element is for larger blocks of text from some external
 source. It also has the `cite` attribute, and we can embed a `<cite>` element in
 it.
+
+## Chapter 7: Setting Backgrounds & Gradients
+
+The background color or image of an element can be set with the **`background`**
+property or its related properties. The **`background-image`** property accepts
+a URL to an image as its value (but it must be used this way:
+`background-image: url("path/to/image")`). By default the background image will
+repeat horizontally and vertically inside the element. This can be controlled
+with the **`background-repeat`** property, using which we can specify whether
+the image repeats in both dimension, horizontally (`repeat-x`), vertically
+(`repeat-y`), or doesn't repeat at all (`no-repeat`).
+
+The background image also starts at the top left corner of the element by
+default. It can be changed with the **`background-position`** property. We can
+give it two lengths to specify it's position horizontally and vertically
+respectively relative to the top left corner. Setting one of them to 50% centers
+the image on that direction. Or we can set it to be on one of the corners or at
+the center using keywords (`top`, `left`, `right`, `bottom`, `center`). If only
+one position is set, the other defaults to 50%.
+
+There is also the shorthand `background` property. It accepts values for the
+other background properties in this order: **color, image, position, repeat**
+(the actual values are only separated by a space, like
+`background: green url("path/to/image") center no-repeat`).
+
+In CSS3 it's also possible to create **gradients**. Gradients are treated as
+images, and so they are set with either the `background` or the
+`background-image` property. The **`linear-gradient`** function accepts a
+comma-separated list of colors. The browser will do the dirty work of actually
+computing the gradient based on the colors we give it. By default the gradients
+run from top to bottom and are evenly spaced. We can change its direction by
+giving it the direction (either words like `to right` or `to bottom left`, or
+degree values like `45deg`; `0deg` is equivalent to changing the direction from
+bottom to top, and each increase rotates the gradient clockwise) at the
+beginning of the list.
+
+```css
+background-image: linear-gradient(120deg, red, yellow);
+```
+
+There is also the **`radial-gradient`** function. The gradient it produces start
+with the first color at the middle, then subsequent colors are added around
+that, while the last color is the outermost gradient.
+
+The colors we provide in the gradient functions are actually **color stops**.
+They are like the color transition points for the gradient. If you have a linear
+gradient from red to green to blue, the browser will first calculate the
+gradient from red to green, then calculate the gradient from green to blue.
+Remember that they are evenly spaced by default, so the green will actually sit
+halfway throughout the gradient. Red and blue are at the opposite ends. The
+default positions of the color stops can be changed, by specifying a length or
+percentage after the color (separated by a space). So if you have
+
+```css
+background-image: linear-gradient(to right, red, green 70%, blue);
+```
+
+The browser will calculate a red-to-green gradient up until 70% of the whole
+gradient. Then it will draw the rest of the gradient, 30% green-to-blue.
+
+Note that there are some browsers that don't support gradients. In cases where
+there's a need to support such browsers, it's a good idea to provide a fallback
+background color.
+
+```css
+background: orange;
+background: linear-gradient(red, yellow);
+```
+
+Because of the way cascades work, the second `background` property will take
+effect on browsers that support it. Meanwhile, browsers that don't support
+gradients will just ignore it, and use the first `background` property.
+
+It is possible to combine or stack together different backgrounds, by using
+multiple values for the `background` property, separated by commas. The first
+background in the list will be the topmost background, while the last is "at the
+rear".
+
+By default, the background image's size is used, but it can be changed with the
+**`background-size`** property. It can accept lengths for width or height. If
+`auto` is used, say for the width, the width will automatically be calculated
+based on the set height so the image's aspect ratio is preserved.
+
+It can also accept the **`cover`** keyword. What it does is the image is scaled
+so it _covers_ the element's width and height. Usually this will crop out some
+parts of the image. There is also the **`contain`** keyword, where the image is
+scaled so that it is _contained_ in the element. No parts of the image are
+cropped out.
+
+**`background-clip`** specifies which parts of the box model the background
+extends to. By default it is set to `border-box`, meaning the background bleeds
+through the border. This is more apparent with a thick dashed border.
+
+**`background-origin`** sets the background's positioning area. By default it is
+set to `padding-box`, meaning the background's top left corner sits at the top
+left corner of the padding.
+
+## Chapter 8: Creating Lists
+
+An **unordered list (`<ul>`)** is a collection of items where order doesn't
+matter. They have vertical margins and a left padding by default. Each item is
+preceded by a solid circle.
+
+An **ordered list (`<ol>`)** is pretty much like an unordered list, except the
+order of the list items matter. It also has a couple of special attributes.
+
+The **`start`** attribute sets the starting count for the ordered list. The
+**`reversed`** boolean attribute reverses the ordering of the list. The value
+attribute is attached to the list item (**`<li>`** for both lists) to change its
+number in the ordered list. Subsequent items will continue counting from that
+value.
+
+A **description list (`<dl>`)** is a list of (usually) pairs of **terms (`dt`)**
+and **descriptions (`dd`)**. There can be multiple terms for a description, or
+multiple descriptions for a single term. The term(s) must be before the
+corresponding description(s).
+
+`<li>` is the only valid child for `<ul>` and `<ol>`. But an `<li>` is free to
+have other elements as children. Even another list, which makes it a **nested
+list**. List markers change with each level of nesting.
+
+The **`list-style-type`** property sets the list marker, ranging from circles
+and squares, to Latin letters, to Roman numerals, to glyphs that you didn't know
+are used somewhere else in the world.
+
+We can also set an image as a "list marker", by setting `list-style-type` to
+`none`, and by setting the image as the list items' background image (plus using
+other properties so the background image doesn't repeat and that there is ample
+margin or padding so the list item doesn't sit on top of the image).
+
+Or just use **`list-style-image`**.
+
+The **`list-style-position`** property can be set to `outside` (default) or
+`inside`. When set to `inside`, the marker is inline with the content of the
+list item, and lines can wrap around it.
+
+There is a shorthand **`list-style`** property that accepts a value for
+`list-style-type` and `list-style-position` in that order.
+
+It's possible to make **horizontal lists**. Setting `<li>` as an inline block
+makes the list horizontal, but the markers are removed. Floating preserves the
+markers, but horizontal margins for the list items is necessary so the marker is
+not on the same space as the previous list item. Note that both techniques come
+with the same gotchas mentioned earlier. Horizontal lists are also used often in
+navs.
+
+## Chapter 9: Adding Media
+
+The **`<img>`** element is used to embed an image on the page. It is a
+self-closing element that requires an **`src`** and **`alt`** attribute. The
+`src` attribute takes a URL to an image as its value. The `alt` attribute takes
+a string of text that describes what the image is. If the image doesn't load for
+some reason, the alt text is displayed instead. Additionally, assistive
+technologies use the alt text.
+
+The most common formats used for images are **GIF**, **JPG** and **PNG**. GIFs
+are those animated images you see in web pages. JPG is for images with high
+color counts, like photographs. PNGs are for images with lower color counts or
+transparencies (like icons).
+
+The `<img>` element also has the `width` and `height` attributes, which take the
+respective dimensions of the image itself. For resizing the image, the `width`
+and `height` _CSS properties_ are used. Either way, when the dimensions are
+explicitly set, the browser can allocate the space needed by the image, so
+content on the page don't suddenly jump when an image starts to load. The page
+also loads faster (because it doesn't have to do recalculations and re-rendering
+of the page when the image starts to load).
+
+If only one dimension is specified, the other takes an implicit value so the
+aspect ratio of the image is preserved. Setting both might distort the image.
+
+`<img>` elements are inline by default.
+
+`<img>` is preferred if the image has semantic value, and is related to the
+content. Otherwise, CSS `background-image` is used.
+
+The **`<audio>`** element allows adding audio to the page. It has the boolean
+attributes `autoplay`, `controls` and `loop`. When `autoplay` is set, the audio
+plays as soon as it can. When `controls` is set, audio controls appear on the
+page. `loop` causes the audio to play non-stop.
+
+The `preload` attribute specifies which additional information about the audio
+is loaded. By default it is set to `auto`, loading all information about the
+audio. `metadata` loads only some. `none` doesn't load anything else. It's a
+good idea to set this to `metadata` or `none` if conserving bandwidth is
+important.
+
+It has the `src` attribute, which takes a URL to an audio file. If fallback
+files (in different formats) are needed, the `src` attribute is not used, and
+multiple **`<source>`** elements are nested inside the `<audio>` tag instead. It
+will try to load the listed audio sources in order. If all else fails, a link to
+the audio file can be placed at the bottom.
+
+The **`<video>`** element is pretty much the same as `<audio>`, except is for,
+well, video. It also has the `poster` attribute, which takes a URL to a poster
+image. The image is displayed until the video is played.
+
+`<audio>` and `<video>` controls are determined by the browser. A more
+customized player can be made by throwing in JavaScript, if need be.
+
+The **`<iframe>`** element is used to embed another web page inside the current
+page. It is often used for embedding media like a YouTube video or Google Maps.
+The page in an iframe is independent of the host page, and it will not inherit
+styles from the host.
+
+The **`<figure>`** element is used for wrapping self-contained content. Think of
+figures in textbooks. Similarly, it can be used for images, tables, charts, code
+snippets, etc. Not every image needs to be wrapped in a `<figure>`.
+
+The **`<figcaption>`** element goes with `<figure>`. Inside a `<figure>`
+element, it describes what the figure is about. There can only be one
+`<figcaption>` per `<figure>`. If it describes an image, the image's `alt`
+attribute can be omitted.
+
+## Chapter 10: Building Forms
+
+**Forms** are used to get input from the user. The **`<form>`** element declares
+a form on the web page. Inside it we put various input controls for the user to
+use. The `<form>` element has the **`action`** attribute, which takes a URL to
+which the data will be sent for processing. The **`method`** attribute
+determines which HTTP method the browser will use to send the data.
+
+The most common form of input is textual input. We can create text fields using
+the **`<input>`** element. By default its **`type`** attribute is `text`.
+`<input>`s also have the `name` attribute, which is the name associated with the
+data (i.e., the name is used to identify which data is which when processing the
+form).
+
+There are also new input types, including `email`, `tel`, `number`, `date`,
+`color`, etc. If the browser supports the input type, it will use the
+appropriate user interface. Otherwise it will just fallback to the `text` type.
+These different input types are quite noticeable when the form is accessed on a
+smartphone (e.g., when the focus is on an `email` type, the keyboard shows the
+most common characters in email addresses, including the `@` symbol; when the
+focus is on a `number` type, the keyboard shows numbers; when the focus is on a
+`date` type, a date picker shows instead of a keyboard).
+
+The **`<textarea>`** control is for larger chunks of text. It can also accept
+multi-line inputs.
+
+The **`radio`** input type is used when a choice among a list of choices is
+needed. The choices should have the same value for their `name` attributes. As
+for their values, it is set with the **`value`** attribute.
+
+The **`checklist`** input type is pretty much like a radio button, except the
+user can choose multiple items from the list.
+
+For larger lists of choices, it's better to use a drop-down menu. The
+**`<select>`** control is used to make a drop-down menu. Inside it is a list of
+**`<option>`** elements, each corresponding to an item in the drop-down. A
+`name` attribute should be attached to the `<select>` control, while `value`
+attributes should be attached to the `<option>`s. It's also possible to make the
+`<select>` control accept multiple selections by adding the `multiple` boolean
+attribute.
+
+When the input's type is `submit`, it becomes a submit button. Clicking it sends
+the data on the form to the URL specified in the `action` attribute for
+processing. If more control over the contents of the button is needed, there's
+the **`<button>`** control. Unlike `<input>`'s, a `<button>` has an opening and
+closing tag, so there's more flexibility over what the button value will be.
+`<button>`s behave like submit inputs by default.
+
+The **`hidden`** type is for data that is not entered by the user. It is used
+for tracking codes, IDs, keys, etc. Since its value can be inspected using the
+browser's dev tools, **it should not be used for sensitive data**.
+
+The **`file`** type is for file uploads/attachments. Styling them is not very
+straightforward.
+
+**Labels (`<label>`)** are used to associate some prompt to an input field. They
+have the `for` attribute that takes an ID of an input element. Clicking on a
+label that's associated with an input causes the input to receive focus. It can
+also wrap around an input, which removes the need for the `for` attribute.
+
+**Field sets (`<fieldset>`)** are like sections, but for form elements. Inside
+it you can put a **`<legend>`** element as its first child, and serves as a
+caption for that field set.
+
+The **`disabled`** boolean attribute prevents an input from activating. Any data
+it might have is also not sent when the form is submitted. Field sets can be
+disabled too, disabling everything inside them.
+
+The **`placeholder`** attribute can be used to provide hints for what the
+input's value should be. It is not a replacement for labels.
+
+The **`required`** boolean attribute makes an input a required field. The input
+field should have a valid value, otherwise the form won't submit and a
+browser-controlled error message appears.
+
+Browsers have different default styles for form controls, so it's a good idea to
+style them yourself.
