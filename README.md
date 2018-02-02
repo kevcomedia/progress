@@ -18,7 +18,7 @@ https://github.com/P1xt/speedstudy
 
 **Courses Completed:** 0
 
-**Total Points earned:** 745
+**Total Points earned:** 755
 
 **Current Course:** [Learn to Code HTML & CSS](http://learn.shayhowe.com/html-css/)
 
@@ -32,6 +32,7 @@ Be sure to check out the [logs](/logs) and [notes](/notes).
 
 | Date Finished | Activity                  | Points | Links  |
 | ------------- | ------------------------- | ------ | ------------------------------------------- |
+| Feb 01        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 | Jan 31        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 | Jan 30        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 | Jan 29        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
