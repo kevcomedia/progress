@@ -596,10 +596,10 @@ attribute is attached to the list item (**`<li>`** for both lists) to change its
 number in the ordered list. Subsequent items will continue counting from that
 value.
 
-A **description list (`<dl>`)** is a list of (usually) pairs of **terms (`dt`)**
-and **descriptions (`dd`)**. There can be multiple terms for a description, or
-multiple descriptions for a single term. The term(s) must be before the
-corresponding description(s).
+A **description list (`<dl>`)** is a list of (usually) pairs of **terms
+(`<dt>`)** and **descriptions (`<dd>`)**. There can be multiple terms for a
+description, or multiple descriptions for a single term. The term(s) must be
+before the corresponding description(s).
 
 `<li>` is the only valid child for `<ul>` and `<ol>`. But an `<li>` is free to
 have other elements as children. Even another list, which makes it a **nested
@@ -775,3 +775,177 @@ browser-controlled error message appears.
 
 Browsers have different default styles for form controls, so it's a good idea to
 style them yourself.
+
+## Chapter 11: Organizing Data with Tables
+
+For marking up tabular data, there's the **`<table>`** element. At the minimum
+it is composed of **table rows (`<tr>`)**, each of which contains **table cells
+(`<td>`)**. If the table cell contains a heading instead of data, it's more
+semantically correct to use the **`<th>`** element instead of a `<td>` element.
+By default, a table heading's scope is the column of data below it, but if the
+heading's scope is the row it's in, we can set its `scope` attribute to `row`.
+
+The **`<caption>`** element serves as the table's caption or title. It must be
+placed at the beginning of the table. The table can also be split into three
+major sections: the header (**`<thead>`**), the body (**`<tbody>`**) and the
+footer (**`<tfoot>`**). The header is often used to contain the row of table
+headings. It must also be the top section of the table. The body is where most
+of the table's contents reside. The footer is used for summaries of data (e.g.,
+in a table of expenses, it can contain the total expenses).
+
+By default table cells sit at the intersection of just one row and one column.
+But if there's a need for a cell to occupy multiple rows or columns, we can set
+its `rowspan` or `colspan` attributes to some positive integer respectively.
+
+When applying borders to table cells, their borders might sit next to each
+other, giving the effect of a much thicker border than intended. The
+**`border-collapse`** property (for `<table>` elements) affects the behavior of
+table borders. When set to `collapse`, the borders of the table cells collapse
+into one (i.e., they will share the same border instead of having their own
+separate borders; that's what happens when `border-collapse` is set to
+`separate`).
+
+**`border-spacing`** determines the space between borders. It only works for
+tables with `border-collapse` set to `separate`. When given two lengths, the
+first length will affect horizontal spacing while the second will affect
+vertical spacing.
+
+Borders can't be applied to table rows or the table structural elements, which
+makes applying borders slightly tricky.
+
+**Striping** is often applied to a table to make the rows more legible.
+
+The **`vertical-align`** property is used to vertically align text for inline or
+table elements (kinda like `text-align`, but vertical).
+
+The **`:first-of-type`** pseudo-class selects the element which is the first of
+its type in some parent element. Same with **`:last-of-type`**.
+
+```html
+<div>
+  <h1>Hello</h1>
+  <p>I am red because of :first-of-type</p>
+  <p>Hello</p>
+  <p>Hello</p>
+  <p>Hello</p>
+  <p>I am blue because of :last-of-type</p>
+  <h2>Hello</h2>
+</div>
+```
+
+```css
+p:first-of-type {
+  color: red;
+}
+
+p:last-of-type {
+  color: blue;
+}
+```
+
+The **`only-of-type`** pseudo-class selects the element only if its the only one
+of its type in some parent element.
+
+```html
+<div>
+  <h1>Hello</h1>
+  <p>I am green because of :only-of-type</p>
+  <h2>Hello</h2>
+</div>
+<div>
+  <h1>Hello</h1>
+  <p>Hello</p>
+  <p>Hello</p>
+  <h2>Hello</h2>
+</div>
+```
+
+```css
+p:only-of-type {
+  color: green;
+}
+```
+
+## Chapter 12: Writing Your Best Code
+
+**Write standards-compliant markup.** Browsers don't complain if you give it
+malformed HTML code. But such code can become unpredictable, as different
+browsers might have different ways to interpret the same malformed code. ID
+names should be unique. Elements should be closed properly, closing them in the
+reverse order as they were opened. Standards-compliant markup doesn't have
+gotchas.
+
+**Make use of semantic elements.** Using semantic elements properly leads to a
+more accessible website. The pages are also easier to style. The source code is
+more readable. Sometimes research is needed to determine which element is the
+most appropriate to use in a given situation.
+
+**Use the proper document structure.** It makes sure the page renders as
+intended in every browser. It's also a step towards standards-compliant code.
+
+**Keep the syntax organized.** Write tags and attributes in lowercase. Use
+proper indentation. Use double quotes for attribute value delimiters.
+Self-closing elements don't need a forward slash at the end of their tags.
+Boolean attributes don't need values; their presence _is_ their value.
+
+**Use practical ID & class names.** These names should be related to what the
+element is or what it does, not based on the element's appearance.
+
+**Use alt text on images.** The alt text is used by screen readers and stuff. It
+should detail what's in the image. If there's nothing to describe in the image,
+give it an empty alt text (don't omit the `alt` attribute altogether!). If the
+image is part of the UI, it's better to include it as a background image.
+
+**Separate content from style.** Avoid inline styles. They cannot be reused, and
+it's a major headache if multiple elements have the same inline styles and the
+styles have to change. It also makes the HTML code focused solely on markup.
+
+**Avoid "Divitis".** It can get hard to track multiple `<div>`s nested together.
+It might also bloat the page. If possible use less of these, or use structural
+elements.
+
+**Continually refactor code.** Code becomes cluttered over time as it grows.
+Every once in a while go back and refactor code.
+
+**Organize code into comments.** CSS can get really big, so it's a good idea to
+group related styles and separate them with comments. A table of contents at the
+top can be helpful as well.
+
+**Write CSS using multiple lines and spaces.** Place each selector in its own
+line. Properties too. The opening bracket should be one space after the last
+selector. The closing bracket is in its own line. There should be a space after
+a colon. Put semicolons after values. Indent the properties.
+
+**Comments and whitespace for code organization also apply to other languages.**
+
+**Use proper class names.** Class names should be modular and related to the
+content of the element they're attached to. They should be written in lowercase
+and words are separated by a hyphen (so they mesh well with CSS syntax).
+
+**Build proficient selectors.** Don't use overly qualified selectors, as they
+increase its specificity. Avoid using ID selectors too as they are very
+specific. Two to three levels should be enough.
+
+**Use specific classes when necessary.** When a selector becomes too long,
+better use a class instead. Long selectors are fragile and not good for
+performance.
+
+**Use shorthand properties and values.** They are simply concise (and the order
+of their values can be looked up anyway). However if only a specific value
+requires styling, don't use the shorthand, so the other values are not affected
+unnecessarily.
+
+**Use shorthand hexadecimal color values.** If applicable, use the
+three-character hex code instead of the usual six. Also use lowercase.
+
+**Drop units from zero values.** `0px` is the same as `0em` is the same as...
+you get the point; the unit can be dropped. However if I recall correctly there
+are a few specific cases where you can't just drop the unit (like `0deg`?).
+
+**Group and align vendor prefixes.** The main name of the prefixed property or
+value should align. Vendor prefixes are becoming less relevant though, and there
+are tools that automatically do the prefixing.
+
+**Modularize styles for reuse.** Make styles that can be shared between elements
+via classes. An example I can think of is Bootstrap's `.btn` class, or the
+`.panel` class.

@@ -18,9 +18,7 @@ https://github.com/P1xt/speedstudy
 
 **Courses Completed:** 0
 
-**Total Points earned:** 765
-
-**Current Course:** [Learn to Code HTML & CSS](http://learn.shayhowe.com/html-css/)
+**Total Points earned:** 875
 
 **Current Project:** [fCC Voting App](https://www.freecodecamp.org/challenges/build-a-voting-app)
 
@@ -32,6 +30,8 @@ Be sure to check out the [logs](/logs) and [notes](/notes).
 
 | Date Finished | Activity                  | Points | Links  |
 | ------------- | ------------------------- | ------ | ------------------------------------------- |
+| Feb 03        | Learn to Code HTML & CSS  | 100     | [Learn to Code HTML & CSS](http://learn.shayhowe.com/html-css/) |
+| Feb 03        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 | Feb 02        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 | Feb 01        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 | Jan 31        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
@@ -54,7 +54,6 @@ Be sure to check out the [logs](/logs) and [notes](/notes).
 
 ## Computer Science Intensive
 
-- [ ] [Learn to Code HTML & CSS](http://learn.shayhowe.com/html-css/)
 - [ ] [Introduction to Computer Science](https://www.edx.org/course/introduction-computer-science-harvardx-cs50x#!)
 - [ ] [Learn to Code Advanced HTML & CSS](http://learn.shayhowe.com/advanced-html-css/)
 - [ ] [Effective Thinking Through Mathematics](https://www.edx.org/course/effective-thinking-through-mathematics-utaustinx-ut-9-01x)
@@ -94,6 +93,7 @@ Be sure to check out the [logs](/logs) and [notes](/notes).
 - [ ] [Introduction to Natural Language Processing](https://www.coursera.org/learn/natural-language-processing)
 - [ ] [Computer Networks](https://lagunita.stanford.edu/courses/Engineering/Networking-SP/SelfPaced/about)
 - [ ] [Parallel Computer Architecture and Programming](http://15418.courses.cs.cmu.edu/spring2016/home)
+- [x] [Learn to Code HTML & CSS](http://learn.shayhowe.com/html-css/)
 
 
 ## Book Suggestions
