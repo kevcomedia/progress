@@ -18,7 +18,7 @@ https://github.com/P1xt/speedstudy
 
 **Courses Completed:** 0
 
-**Total Points earned:** 875
+**Total Points earned:** 885
 
 **Current Project:** [fCC Voting App](https://www.freecodecamp.org/challenges/build-a-voting-app)
 
@@ -30,6 +30,7 @@ Be sure to check out the [logs](/logs) and [notes](/notes).
 
 | Date Finished | Activity                  | Points | Links  |
 | ------------- | ------------------------- | ------ | ------------------------------------------- |
+| Feb 04        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 | Feb 03        | Learn to Code HTML & CSS  | 100     | [Learn to Code HTML & CSS](http://learn.shayhowe.com/html-css/) |
 | Feb 03        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 | Feb 02        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
