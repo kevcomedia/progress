@@ -18,9 +18,9 @@ https://github.com/P1xt/speedstudy
 
 **Courses Completed:** 0
 
-**Total Points earned:** 895
+**Total Points earned:** 905
 
-**Current Project:** [fCC Voting App](https://www.freecodecamp.org/challenges/build-a-voting-app)
+**Current Item:** [Material Resume Clone](https://creativemarket.com/ikonome/686585-Material-Resume-Blue/screenshots/#screenshot3)
 
 **Current Book(s):**
 
@@ -30,6 +30,7 @@ Be sure to check out the [logs](/logs) and [notes](/notes).
 
 | Date Finished | Activity                  | Points | Links  |
 | ------------- | ------------------------- | ------ | ------------------------------------------- |
+| Feb 06        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 | Feb 05        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 | Feb 04        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 | Feb 03        | Learn to Code HTML & CSS  | 100     | [Learn to Code HTML & CSS](http://learn.shayhowe.com/html-css/) |
