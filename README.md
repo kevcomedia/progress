@@ -18,7 +18,7 @@ https://github.com/P1xt/speedstudy
 
 **Courses Completed:** 0
 
-**Total Points earned:** 935
+**Total Points earned:** 945
 
 **Current Item:** [Material Resume Clone](https://creativemarket.com/ikonome/686585-Material-Resume-Blue/screenshots/#screenshot3)
 
@@ -30,6 +30,7 @@ Be sure to check out the [logs](/logs) and [notes](/notes).
 
 | Date Finished | Activity                  | Points | Links  |
 | ------------- | ------------------------- | ------ | ------------------------------------------- |
+| Feb 10        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 | Feb 09        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 | Feb 08        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 | Feb 07        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
