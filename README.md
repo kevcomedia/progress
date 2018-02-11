@@ -20,7 +20,7 @@ https://github.com/P1xt/speedstudy
 
 **Total Points earned:** 1055
 
-**Current Item:** [Material Resume Clone](https://creativemarket.com/ikonome/686585-Material-Resume-Blue/screenshots/#screenshot3)
+**Current Item:** [Introduction to Computer Science](https://www.edx.org/course/introduction-computer-science-harvardx-cs50x#!)
 
 **Current Book(s):**
 
