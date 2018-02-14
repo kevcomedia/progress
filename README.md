@@ -18,7 +18,7 @@ https://github.com/P1xt/speedstudy
 
 **Courses Completed:** 1
 
-**Total Points earned:** 1075
+**Total Points earned:** 1085
 
 **Current Item:** [Introduction to Computer Science](https://www.edx.org/course/introduction-computer-science-harvardx-cs50x#!)
 
@@ -30,6 +30,7 @@ Be sure to check out the [logs](/logs) and [notes](/notes).
 
 | Date Finished | Activity                  | Points | Links  |
 | ------------- | ------------------------- | ------ | ------------------------------------------- |
+| Feb 14        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 | Feb 13        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 | Feb 12        | Khan Academy              | 10     | [Khan Academy](https://www.khanacademy.org/profile/gckev/) |
 | Feb 11        | Material Resume Clone     | 100    | [Demo](https://gckev-material-resume.surge.sh/)            |
